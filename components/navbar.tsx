@@ -1,17 +1,20 @@
 import React from 'react'
 import  bell  from '../public/Images/bell.png'
 import Image from 'next/image'
+import Link from 'next/link'
 const Navbar = () => {
   return (
     <div>
       <div className="flex items-center justify-between px-10 py-2 bg-slate-950 text-white ">
       {/* Logo and title */}
       <div className="flex  items-center space-x-2">
-        <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-green-500 rounded-md" />
+        {/* <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-green-500 rounded-md" /> */}
+        <Link href="/">
         <div className='flex flex-col'>
-        <h1 className="text-lg text-green-400 font-semibold">ROBOFLYBD</h1>
+        <h1 className="text-2xl text-green-400 font-semibold">ROBOFLYBD</h1>
         <span className="text-gray-500">Robotics Shop</span>
         </div>
+        </Link>
       </div>
 
       {/* Search input */}
@@ -29,9 +32,11 @@ const Navbar = () => {
       {/* Notification and Add Report button */}
       <div className="flex items-center space-x-4">
         <Image src={bell} alt='bellicon' width={32} height={32} className='bg-white rounded-md p-1'/>
+        <Link href="/login">
         <button className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600">
           Login
         </button>
+        </Link>
       </div>
     </div>
     </div>

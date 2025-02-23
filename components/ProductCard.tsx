@@ -6,14 +6,14 @@ const ProductCard = () => {
   return (
     <div className='py-2 flex space-x-4'>
         {products.map((item,index)=>(
-            <div key={index} className='p-2  flex flex-col items-center rounded-md bg-gray-800'>
+            <div key={index} className='p-2  flex flex-col items-center rounded-md bg-slate-800'>
                 <Link href={`/productdetails?id=${item.id}`}>
                 <Image 
                 src={item.image}
                 alt='product image'
-                width="200"
-                height="200"
-                className='rounded-xl h-auto object-contain px-2 py-2'
+                width={200}
+                height={280}
+                className='rounded-xl px-2 py-2'
                 />
                 <div className='flex flex-col'>
                 <h4 className='mt-2 text-md text-center text-sm text-gray-200'>{item.title.length >30 ? item.title.slice(0,20) + "" : item.title}</h4>

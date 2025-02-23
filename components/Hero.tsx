@@ -4,7 +4,7 @@ import robocar from '../public/images/robocar.png'
 const Hero = () => {
   return (
     <div className="m-4 flex flex-row space-x-4">
-        <div className="flex flex-row  rounded-lg bg-gray-800 items-center">
+        <div className="flex flex-row  rounded-lg bg-gray-800 items-center w-full">
             <Image 
                 src={roboarm}
                 width="300"
@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
             
         </div>
-        <div className="bg-gray-800 rounded-lg">
+        <div className="bg-gray-800 rounded-lg max-w-sm w-full flex flex-col items-center justify-evenly">
             <Image 
                 src={robocar}
                 width = "300"
@@ -30,6 +30,11 @@ const Hero = () => {
                 className=""
                 
             />
+            <div>
+                <p className="text-sm text-gray-400">Yeah,</p>
+                <p className="text-xl font-bold">Making Project Is Easier</p>
+                <p className="text-gray-400">RoboFlyBD <span className="text-green-400 font-bold">Makes</span> Project Also</p>
+            </div>
         </div>
       
     </div>

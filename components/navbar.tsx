@@ -1,13 +1,17 @@
-import React from 'react'
-import  bell  from '../public/Images/bell.png'
-import Image from 'next/image'
+"use client"
+import React, { useState } from 'react'
 import Link from 'next/link'
+import Login from '@/components/Login'
+import { AiOutlineBell, AiOutlineShoppingCart } from 'react-icons/ai'
+import { AiOutlineHeart } from 'react-icons/ai'
+
 const Navbar = () => {
+  const [isOpen,setIsOpen] = useState(false);
   return (
     <div>
       <div className="flex items-center justify-between px-10 py-2 bg-slate-950 text-white ">
       {/* Logo and title */}
-      <div className="flex  items-center space-x-2">
+      <div className="flex  items-center space-x-2 mx-4 sm:pr-4">
         {/* <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-green-500 rounded-md" /> */}
         <Link href="/">
         <div className='flex flex-col'>
@@ -18,27 +22,38 @@ const Navbar = () => {
       </div>
 
       {/* Search input */}
-      <div className="flex-1 max-w-xl mx-4">
+      <div className="flex-1 max-w-5xl ">
         <input
           type="text"
           placeholder="Search . . ."
           className="w-full px-3 py-2  rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 bg-black bg-gray-800"
         />
       </div>
-    <div className='flex flex-row'>
-      <p>Cart :</p>
-      <p className='text-green-400'>19</p>
+
+    
+    <div className='px-4 flex flex-row space-x-4 mx-4'>
+      <AiOutlineHeart size={24}/>
+      <AiOutlineBell size={24}/>
+      <Link href="/cart" className='flex justify-evenly space-x-2'>
+        <AiOutlineShoppingCart size={24} />
+        <p>7</p>
+      </Link>
     </div>
-      {/* Notification and Add Report button */}
+      
       <div className="flex items-center space-x-4">
-        <Image src={bell} alt='bellicon' width={32} height={32} className='bg-white rounded-md p-1'/>
-        <Link href="/login">
-        <button className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600">
+        {/* <Link href="/login"> */}
+        <button 
+        className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
+        onClick={()=> setIsOpen(true)}
+        >
           Login
         </button>
-        </Link>
+          
+        {/* </Link> */}
       </div>
     </div>
+
+    {isOpen && <Login setIsOpen={setIsOpen} />}
     </div>
   )
 }

@@ -1,18 +1,22 @@
 "use client";
 
 import { Suspense } from "react";
-import { useSearchParams } from "next/navigation";
-import { products } from "../../../Constant";
+import { useParams } from "next/navigation";
+import { products } from "../../../../Constant";
 
 const ProductDetailsContent = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams?.get("id"); // Get the 'id' from query parameters
+  const params = useParams();
+  const id = params?.id;
 
-  if (!id || isNaN(parseInt(id, 10))) {
-    return <p>Invalid product ID</p>; // Handle invalid or missing IDs
+  // Ensure 'id' is always a string
+  const productId = Array.isArray(id) ? id[0] : id;
+
+  // Check if productId is valid
+  if (!productId || isNaN(parseInt(productId, 10))) {
+    return <p>Invalid product ID</p>;
   }
 
-  const product = products.find((item) => item.id === parseInt(id, 10));
+  const product = products.find((item) => item.id === parseInt(productId, 10));
 
   if (!product) {
     return <p>Product not found</p>;

@@ -26,7 +26,7 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search . . ."
-          className="w-full px-3 py-2  rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 bg-black bg-gray-800"
+          className="w-full px-4 py-2  rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 bg-black bg-gray-800"
         />
       </div>
 
@@ -36,7 +36,7 @@ const Navbar = () => {
       <AiOutlineBell size={24}/>
       <Link href="/cart" className='flex justify-evenly space-x-2'>
         <AiOutlineShoppingCart size={24} />
-        <p>7</p>
+        <p className='text-sm'>7</p>
       </Link>
     </div>
       

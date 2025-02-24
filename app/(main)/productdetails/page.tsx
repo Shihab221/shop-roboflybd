@@ -20,13 +20,13 @@ const ProductDetails = () => {
     <div className=" w-full p-4">
       <div className='space-x-4 flex flex-row justify-between'>
         <div className='bg-gray-800 flex sm:flex-row flex-col rounded-lg w-full'>
-        <img
-          src={product.image}
-          alt={product.title}
-          width= "360"
-          height= "360"
-          className="rounded-md my-4 mx-4"
-        />
+          <img
+            src={product.image}
+            alt={product.title}
+            width={512}
+            height={512}
+            className="rounded-md my-4 mx-4 object-contain max-w-sm"
+          />
         <div className='px-6 py-6'>
           <h2 className="text-2xl font-bold text-gray-300">{product.title}</h2>
           <p className="text-lg">Price: {product.discounted_price} Tk</p>

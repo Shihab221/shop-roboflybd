@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { sidebarData } from "../Constant.jsx";
 import { useRouter } from 'next/navigation';
 import { IoMenu,IoClose  } from "react-icons/io5";

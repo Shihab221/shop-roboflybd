@@ -4,7 +4,7 @@ import robocar from '../public/images/robocar.png'
 const Hero = () => {
   return (
     <div className="m-4 flex flex-col sm:flex-row">
-        <div className="flex flex-col sm:flex-row  rounded-lg bg-gray-800 items-center w-full sm:mx-4 sm:my-0 my-4">
+        <div className="flex flex-col sm:flex-row  rounded-lg bg-gray-800 items-center w-full sm:mr-6  sm:my-0 my-4">
             <Image 
                 src={roboarm}
                 width="300"

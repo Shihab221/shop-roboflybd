@@ -19,7 +19,7 @@ const Navbar = () => {
           <button onClick={() => setIsOpen(true)} className="md:hidden text-2xl">
             <IoMenu />
           </button>
-          <div className="flex-1 max-w-full">
+          <div className="flex-1 sm:hidden max-w-full">
           <input
             type="text"
             placeholder="Search . . ."
@@ -28,8 +28,8 @@ const Navbar = () => {
         </div>
           <Link href="/">
             <div className="flex flex-col">
-              <h1 className="text-xl text-green-500 font-semibold">ROBOFLYBD</h1>
-              
+              <h1 className="text-2xl text-green-500 font-semibold">ROBOFLYBD</h1>
+              {/* <p className='text-gray-400 text-sm'>Your Robo Shop</p> */}
             </div>
           </Link>
         </div>

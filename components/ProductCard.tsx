@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const ProductCard = () => {
   return (
-    <div className='py-2 flex flex flex-col sm:flex-row '>
+    <div className='grid grid-cols-2 sm:flex flex-row py-2'>
         {products.map((item,index)=>(
             <div key={index} className='p-2 flex flex-col items-center rounded-md bg-slate-800 my-2 mx-2'>
                 <Link href={`/product/${item.id}`}>

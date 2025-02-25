@@ -19,10 +19,17 @@ const Navbar = () => {
           <button onClick={() => setIsOpen(true)} className="md:hidden text-2xl">
             <IoMenu />
           </button>
+          <div className="flex-1 max-w-full">
+          <input
+            type="text"
+            placeholder="Search . . ."
+            className="w-full px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-800"
+          />
+        </div>
           <Link href="/">
             <div className="flex flex-col">
-              <h1 className="text-2xl text-green-400 font-semibold">ROBOFLYBD</h1>
-              <span className="text-gray-500 text-sm">Robotics Shop</span>
+              <h1 className="text-xl text-green-500 font-semibold">ROBOFLYBD</h1>
+              
             </div>
           </Link>
         </div>
@@ -37,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Icons & Login */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 items-center">
           <AiOutlineHeart size={24} />
           <AiOutlineBell size={24} />
           <Link href="/cart" className='flex space-x-2'>
@@ -58,6 +65,7 @@ const Navbar = () => {
 
       {/* Bottom Navigation (Mobile Only) */}
       <div className="fixed bottom-0 w-full bg-slate-950 text-white flex justify-around items-center py-3 md:hidden max-w-full">
+      
         <AiOutlineHeart size={24} />
         <AiOutlineBell size={24} />
         <Link href="/cart" className="flex space-x-2">

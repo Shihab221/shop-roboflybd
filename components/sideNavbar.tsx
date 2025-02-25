@@ -13,7 +13,7 @@ const sideNavbar = () => {
   };
 
   return (
-    <div className="flex flex-row bg-slate-950">
+    <div className="flex flex-row bg-slate-950 hidden md:block">
       <div className="px-2 ">
         <button
           onClick={() => setIsOpen(!isOpen)}

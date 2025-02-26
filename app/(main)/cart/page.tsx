@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { products } from '@/Constant'
 import Image from 'next/image'
 const page = () => {

@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link href="/">
             <div className="flex flex-col">
               <h1 className="text-2xl text-green-500 font-semibold">ROBOFLYBD</h1>
-              {/* <p className='text-gray-400 text-sm'>Your Robo Shop</p> */}
+              <p className='text-gray-400 text-sm hidden sm:'>Your Robo Shop</p>
             </div>
           </Link>
         </div>
